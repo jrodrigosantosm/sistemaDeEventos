@@ -23,6 +23,8 @@ INSERT INTO graduacoes (id_arte_marcial, graduacao) VALUES
 (1, 'Faixa Branca'),
 (1, 'Faixa Azul'),
 (1, 'Faixa Roxa'),
+(1, 'Faixa Marrom'),
+(1, 'Faixa Preta'),
 (2, 'Nak Muay'),
 (2, 'Prachan'),
 (3, '10º Kyu'),
