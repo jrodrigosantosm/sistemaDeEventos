@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Usuarios;
+use Yii;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -38,6 +39,7 @@ class UsuarioController extends Controller
      */
     public function actionIndex()
     {
+        die('aqui');
         $dataProvider = new ActiveDataProvider([
             'query' => Usuarios::find(),
             /*
