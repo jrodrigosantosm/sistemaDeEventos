@@ -39,25 +39,12 @@ class UsuarioController extends Controller
      */
     public function actionIndex()
     {
-        die('aqui');
-        $dataProvider = new ActiveDataProvider([
-            'query' => Usuarios::find(),
-            /*
-            'pagination' => [
-                'pageSize' => 50
-            ],
-            'sort' => [
-                'defaultOrder' => [
-                    'id' => SORT_DESC,
-                ]
-            ],
-            */
-        ]);
-
+        $usuarios = Usuarios::find()->all();
         return $this->render('index', [
-            'dataProvider' => $dataProvider,
+            'usuarios' => $usuarios,
         ]);
     }
+
 
     /**
      * Displays a single Usuarios model.
