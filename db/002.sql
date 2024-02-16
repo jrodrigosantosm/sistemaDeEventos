@@ -1,6 +1,6 @@
 -- Script para criar a tabela de usuarios_anunciantes
 CREATE TABLE usuarios_anunciantes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     telefone VARCHAR(20),
     email VARCHAR(255) NOT NULL,
@@ -10,10 +10,11 @@ CREATE TABLE usuarios_anunciantes (
 
 -- Script para criar a tabela de eventos
 CREATE TABLE eventos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     descricao TEXT,
     id_criador INT NOT NULL,
     data DATE,
     FOREIGN KEY (id_criador) REFERENCES usuarios_anunciantes(id)
 );
+
