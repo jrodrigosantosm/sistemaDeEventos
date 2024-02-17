@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\ArtesMarciais;
 use app\models\Usuarios;
 use Yii;
 use yii\data\ActiveDataProvider;
@@ -129,5 +130,14 @@ class UsuarioController extends Controller
         }
 
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+    }
+
+    public function actionGetArtesMarciais()
+    {
+        $artesMarciais = ArtesMarciais::find()
+            ->orderBy(['id' => SORT_ASC])
+            ->all();
+
+        return $artesMarciais;
     }
 }

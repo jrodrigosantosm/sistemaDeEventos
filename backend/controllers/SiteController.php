@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\ArtesMarciais;
 use Yii;
 use yii\web\Controller;
 use app\models\Usuario;
@@ -26,19 +27,8 @@ class SiteController extends Controller
         ]);
     }
 
-    // public function actionLogin()
-    // {
-    //     if (!Yii::$app->user->isGuest) {
-    //         return $this->goHome();
-    //     }
-
-    //     $model = new LoginForm();
-    //     if ($model->load(Yii::$app->request->post()) && $model->login()) {
-    //         return $this->goBack();
-    //     }
-
-    //     return $this->render('login', [
-    //         'model' => $model,
-    //     ]);
-    // }
+    public function actionGetArtesMarciais()
+    {
+        $artemacial = ArtesMarciais::findAll([]);
+    }
 }
